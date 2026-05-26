@@ -4,7 +4,6 @@ class Estudiante:
     def __init__(self, nombre, apellido, matricula, carrera):
         self.id_estudiante = Estudiante.contador_id
         Estudiante.contador_id += 1
-
         self.nombre = nombre
         self.apellido = apellido
         self.matricula = matricula
@@ -23,7 +22,6 @@ class Estudiante:
         print(f"Nombre: {self.nombre} {self.apellido}")
         print(f"Matrícula: {self.matricula}")
         print(f"Carrera: {self.carrera}")
-
         if self.cursos:
             print("Cursos inscriptos:")
             for curso in self.cursos:
