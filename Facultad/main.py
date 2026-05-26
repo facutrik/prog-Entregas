@@ -1,44 +1,36 @@
-
 from classFacultad import SistemaFacultad
 from menu import mostrar_menu
 
-
 def main():
-
     sistema = SistemaFacultad()
-
     while True:
-
         mostrar_menu()
-
         opcion = input("Seleccione una opción: ")
 
-        match opcion:
+        if opcion == "1":
+            sistema.registrar_estudiante()
 
-            case "1":
-                sistema.registrar_estudiante()
+        elif opcion == "2":
+            sistema.registrar_curso()
 
-            case "2":
-                sistema.registrar_curso()
+        elif opcion == "3":
+            sistema.inscribir_estudiante()
 
-            case "3":
-                sistema.inscribir_estudiante()
+        elif opcion == "4":
+            sistema.baja_curso()
 
-            case "4":
-                sistema.baja_curso()
+        elif opcion == "5":
+            sistema.mostrar_cursos()
 
-            case "5":
-                sistema.mostrar_cursos()
+        elif opcion == "6":
+            sistema.mostrar_estudiantes()
 
-            case "6":
-                sistema.mostrar_estudiantes()
+        elif opcion == "7":
+            print("Saliendo del sistema...")
+            break
 
-            case "7":
-                print("Saliendo del sistema...")
-                break
+        else:
+            print("Opción inválida")
 
-            case _:
-                print("Opción inválida")
-
-
-main()
+if __name__ == "__main__":
+    main()
