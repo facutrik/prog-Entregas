@@ -23,15 +23,13 @@ class SistemaFacultad:
         print("\n  Registrar estudiante")
         while True:
             try:
-                nombre = validar_texto(input("Nombre: "), "nombre"
-                )
+                nombre = validar_texto(input("Nombre: "), "nombre")
                 break
             except ValueError as e:
                 print("Error:", e)
         while True:
             try:
-                apellido = validar_texto(input("Apellido: "), "apellido"
-                )
+                apellido = validar_texto(input("Apellido: "), "apellido")
                 break
             except ValueError as e:
                 print("Error:", e)
