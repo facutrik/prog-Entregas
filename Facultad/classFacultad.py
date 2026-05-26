@@ -2,12 +2,10 @@ from classEstudiante import Estudiante
 from classCurso import Curso
 from validaciones import validar_texto, validar_numero
 
-
 class SistemaFacultad:
     def __init__(self):
         self.estudiantes = []
         self.cursos = []
-
 
     def buscar_estudiante(self, matricula):
         for e in self.estudiantes:
@@ -15,13 +13,11 @@ class SistemaFacultad:
                 return e
         return None
 
-
     def buscar_curso(self, codigo):
         for c in self.cursos:
             if c.codigo == codigo:
                 return c
         return None
-
 
     def registrar_estudiante(self):
         print("\n  Registrar estudiante")
@@ -58,7 +54,6 @@ class SistemaFacultad:
         estudiante = Estudiante(nombre, apellido, matricula, carrera)
         self.estudiantes.append(estudiante)
         print("\nEstudiante registrado correctamente")
-
 
     def registrar_curso(self):
         print("\n  Registrar curso")
@@ -98,7 +93,6 @@ class SistemaFacultad:
         self.cursos.append(curso)
         print("\nCurso registrado correctamente")
 
-
     def inscribir_estudiante(self):
         print("\n  Inscribir a curso")
         while True:
@@ -131,7 +125,6 @@ class SistemaFacultad:
         estudiante.inscribir_curso(curso)
         print("\nInscripción realizada correctamente")
 
-
     def baja_curso(self):
         print("\n  Bajar de curso")
         while True:
@@ -161,7 +154,6 @@ class SistemaFacultad:
         estudiante.baja_curso(curso)
         print("\nBaja realizada correctamente")
 
-
     def mostrar_cursos(self):
         print("\n  Lista de cursos")
         if len(self.cursos) == 0:
@@ -169,7 +161,6 @@ class SistemaFacultad:
             return
         for curso in self.cursos:
             curso.mostrar_estado()
-
 
     def mostrar_estudiantes(self):
         print("\n  Lista de estudiantes")
